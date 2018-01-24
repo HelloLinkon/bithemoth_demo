@@ -6,6 +6,31 @@ body{
 h1,h2,h3,h4,h5,h6,p{
 	margin: 0;
 }
+
+img{
+	width: 100%;
+}
+
+@font-face {
+ font-family: elliot;
+ src: url("font/ElliotSans-BoldItalic.eot") /* EOT file for IE */
+}
+@font-face {
+ font-family: elliot;
+ src: url("font/ElliotSans-BoldItalic.ttf") /* TTF file for CSS3 browsers */
+}
+
+@font-face {
+ font-family: elliotbd;
+ src: url("font/ElliotSans-Bold.ttf") /* TTF file for CSS3 browsers */
+}
+
+@font-face {
+ font-family: elliotlt;
+ src: url("font/ElliotSans-Light.ttf") /* TTF file for CSS3 browsers */
+}
+
+
 .navbar-default {
     background-color: transparent;
     border: none;
@@ -19,7 +44,7 @@ h1,h2,h3,h4,h5,h6,p{
 }
 
 .navbar-default .navbar-brand:hover {
-    color: white;
+    color: #84a86b;
     background-color: transparent;
 }
 
@@ -29,22 +54,47 @@ h1,h2,h3,h4,h5,h6,p{
 }
 
 .navbar-default .navbar-nav>li>a:hover {
-    color: white;
-    border-bottom: 2px solid white;
+    color: #84a86b;
+    border-bottom: 2px solid #84a86b;
 }
 
 .top_banner{
 	background: url("images/1.jpg");
-	background-size: cover;
+	background-size:  cover;
+	/*background-repeat: no-repeat; */
 	margin: 0;
 	box-sizing: border-box;
-	/*height: 90vh;*/
-	padding-bottom: 20%;
+	background-attachment: fixed;
+	/*height: 100vh;*/
+	padding-bottom: 150px;
 	position: relative;
+
+}
+
+.top_form{
+	margin-top: 40%;
+	/*background: white;*/
+	/*padding: 50px;*/
+	/*transform: skew(10deg, 12deg);*/
+}
+
+.border{
+	border: 2px solid red;
 }
 .banner_text{
-	margin-top: 30%;
+	margin-top: 25%;
 	
+	
+}
+
+.topimg{
+	width: 50%;
+}
+
+.banner_text h1{
+	font-family: elliot;
+	text-shadow: 2px 2px 5px #84a86b;
+    transform: rotate(-4deg);
 }
 
 
@@ -57,26 +107,50 @@ h1,h2,h3,h4,h5,h6,p{
 .main_text{
 	color: white;
 	margin: 0;
-	font-size: 48px;
+	font-size: 60px;
 }
 
 .btn-start{
 	padding: 15px 65px;
 	border: none;
 	color: white;
-	margin-top: 20px;
-	background: #0099e5;
+	margin-top: 60px;
+	background: #84a86b;
+	box-sizing: border-box;
+	cursor: pointer;
+}
+
+.btn-exchange{
+	padding: 15px 65px;
+	border: none;
+	color: #84a86b;
+	margin-top: 60px;
+	background: white;
+	/*border: 2px solid #84a86b;*/
+	cursor: pointer;
+	box-sizing: border-box;
 }
 
 .live_price{
 	margin: 0;
-	background: url('images/picture6_currency.jpg');
+	/*background: url('images/picture6_currency.jpg');*/
+	/*background: url('images/lines.png'), #6fab2c;*/
+	background-color: #91b37b;
+    background-image: -webkit-linear-gradient(30deg, #91b37b 50%, #84a86b 50%);
+	background-size: cover;
+	/*opacity: 0.5;*/
 	padding: 40px 0;
+	/*transform: rotate(-15deg);*/
+}
+
+.live_price .container{
+	/*transform: rotate(15deg);*/
 }
 
 .live_price h1{
-	color: #0099e5;
+	color: white;
 	text-align: center;
+	font-family: elliot;
 }
 
 .live_price p{
@@ -84,19 +158,29 @@ h1,h2,h3,h4,h5,h6,p{
 	text-align: center;
 	font-size: 24px;
 	width: 80%;
-	color: grey;
+	color: white;
+	font-family: elliotlt;
+
 }
 
 .card{
-	background: #0099e5;
-	color: white;
+	background: white;
+	color: #84a86b;
 	padding: 20px 10px;
 	text-align: center;
 	border-radius: 12px;
+	box-shadow: inset 1px 0px 3px 2px #497d10;
 }
 
 .grey{
-	background: grey;
+	background: #599e14;
+	color: white;
+	box-shadow: inset 1px 0px 3px 2px #497d10;
+}
+
+.navbar-brand img{
+	/*display: inline-block;
+    width: 30%;*/
 }
 
 .card h5{
@@ -120,35 +204,45 @@ h1,h2,h3,h4,h5,h6,p{
 }
 
 .how_works{
-	background-color: #0099e5;
-    background-image: -webkit-linear-gradient(30deg, #0099e5 50%, #218bda 50%);
+	
+    background: url("images/1.jpg");
+    background-size: cover;
+    background-attachment: fixed;
     padding: 50px 0;
 }
 
 
 .work_img{
-	padding: 50px 0;
+	padding: 100px 0;
 }
 .how_works h1,p{
 	color: white;
 	text-align: center;
+	font-family: elliot;
 }
 
 .how_works p{
 	font-size: 24px;
+	font-family: elliotlt;
 }
 
 .how_works .item{
 	margin-top: 40px;
+	background: #84a86b;
+	padding: 20px;
+	box-sizing: border-box;
+	border-left: 10px solid white;
 }
 
 .how_works .item h2{
 	color: white;
 	margin-bottom: 10px;
+	font-family: elliot;
 }
 
+
 .how_works .item h5{
-	color: black;
+	color: white;
 	width: 70%;
 	font-weight: normal;
 }
@@ -157,13 +251,14 @@ h1,h2,h3,h4,h5,h6,p{
 .footer{
 	margin: 0;
 	padding: 50px 0;
-	color: white;
+	color: #84a86b;
 	background-size: cover;
-    background-image: url(https://modeltheme.com/mt_bitcurrency/wp-content/themes/cryptic/images/footer.jpg);
+    background-image: url(images/picture6_currency.jpg);
 }
 
 .footer h1{
 	margin-bottom: 40px;
+	font-family: elliot;
 }
 
 .footer ul{
@@ -183,6 +278,60 @@ h1,h2,h3,h4,h5,h6,p{
 	margin: 0 auto;
 }
 
+.foot {
+	text-align: center;
+}
+
+.foot h1{
+	font-family: elliotbd;
+	margin-bottom: 0;
+}
+
+.foot p{
+	color: grey;
+}
+
+.foot i{
+	font-size: 28px;
+	color: #478707;
+}
+
+.buy_section{
+	background: #84a86b;
+	/*height: 20px;*/
+	margin-top: 100px;
+}
+
+.buy_section ul{
+	list-style: none;
+	margin: 0;
+}
+
+.buy_section ul li{
+	display: inline-block;
+	color: white;
+	padding: 10px 15px;
+}
+
+.exchange_section{
+	/*border: 2px solid ?red;*/
+	margin-top: 100px;
+	color: white;
+	font-family: elliot;
+}
+
+select{
+	width: 80%;
+    background: transparent;
+    border: 2px solid #84a86b;
+    /* padding: 8px; */
+    font-size: 31px;
+    margin-top: 10px;
+}
+
+.promotion{
+	margin: 50px auto;
+}
 
 
 
